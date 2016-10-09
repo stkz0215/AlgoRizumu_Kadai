@@ -28,14 +28,8 @@ int main(void) {
 
     return 0;
 }
-
-int sumof(int a, int b) {
-    int res = 0;
-    int i;
-
-    for (i=a; i<=b; i++) {
-        res += i;
-    }
-
-    return res;
+int sumof(int a, int b){
+    int sub = (a > b)? a - b + 1 : b - a + 1;
+    int sum = a + b;
+    return sum * sub / 2;
 }
